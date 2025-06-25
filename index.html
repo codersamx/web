@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Hexadecimal | Herramienta de Conversión</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Estilos Generales --- */
+        :root {
+            --bg-color: #12181b;
+            --surface-color: #1a2226;
+            --primary-color: #00bcd4; /* Cian vibrante */
+            --text-color: #e0e0e0;
+            --text-muted: #8899a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: white;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h2 span {
+            color: var(--primary-color);
+        }
+
+        /* --- Encabezado --- */
+        .header {
+            background: rgba(26, 34, 38, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        /* --- Sección Principal (Hero) --- */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 120px;
+            text-align: center;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 20px auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #111;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+        }
+
+        /* --- Sección de Funcionalidades --- */
+        #features {
+            padding: 80px 0;
+            background-color: var(--surface-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #2a363b;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-muted);
+        }
+
+        /* --- Pie de Página --- */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--surface-color);
+        }
+
+        .footer p {
+            color: var(--text-muted);
+        }
+        
+        /* --- Responsividad para móviles --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">Asistente<span>Hex</span></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Asistente de Conversiones Hexadecimal</h1>
+                <p>La herramienta definitiva para estudiantes y programadores de bajo nivel. Simplifica tus conversiones más complejas con una interfaz intuitiva y potentes funcionalidades.</p>
+                <a href="https://www.mediafire.com/file/hoi4p50l1r2monj/Asistentete_Hexadecimal.rar/file" class="cta-button" target="_blank" rel="noopener noreferrer">
+                    Descargar para Windows
+                </a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2><span>Funcionalidades</span> Principales</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">🖥️</div>
+                        <h3>Conversor IEEE 754</h3>
+                        <p>Convierte números flotantes a su representación hexadecimal de 32 o 64 bits, entendiendo cómo se almacenan en memoria.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔤</div>
+                        <h3>Texto a ASCII/Hex</h3>
+                        <p>Transforma cualquier cadena de texto en sus códigos ASCII y valores hexadecimales correspondientes de forma instantánea.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔢</div>
+                        <h3>Conversor de Bases</h3>
+                        <p>Trabaja de forma fluida entre bases numéricas: Decimal, Binario, Hexadecimal y Octal, con actualizaciones en tiempo real.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔄</div>
+                        <h3>Calculadora C2</h3>
+                        <p>Calcula el Complemento a Dos de cualquier número para obtener su representación negativa en 8, 16, 32 o 64 bits.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">💾</div>
+                        <h3>Orden de Memoria</h3>
+                        <p>Visualiza cómo se organizan los bytes en la memoria (Little-Endian vs. Big-Endian) para evitar errores en sistemas de bajo nivel.</p>
+                    </div>
+                     <div class="feature-card">
+                        <div class="icon">💡</div>
+                        <h3>Interfaz Moderna</h3>
+                        <p>Diseñada con un tema oscuro y controles claros para una experiencia de usuario cómoda y eficiente durante largas sesiones de trabajo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Asistente Hexadecimal. Un proyecto creado por Samuel Quispe.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
